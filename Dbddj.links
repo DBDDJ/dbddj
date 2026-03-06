@@ -1,1 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DBD DJ</title>
+  <style>
+    * { box-sizing: border-box; }
 
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 30%),
+        linear-gradient(180deg, #111 0%, #000 100%);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      opacity: 0.3;
+    }
+
+    .fog {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 200%;
+      height: 20vh;
+      background: radial-gradient(circle, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0) 70%);
+      filter: blur(30px);
+      animation: drift 14s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes drift {
+      from { transform: translateX(0); }
+      to { transform: translateX(-25%); }
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 60px 20px 100px;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      letter-spacing: 3px;
+      text-shadow: 0 0 12px rgba(255,255,255,0.15);
+    }
+
+    p {
+      color: #ccc;
+      margin-bottom: 30px;
+    }
+
+    .main-link {
+      display: inline-block;
+      background: linear-gradient(135deg, #c00000, #0044ff);
+      color: #fff;
+      text-decoration: none;
+      padding: 18px 30px;
+      border-radius: 14px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.12);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .main-link:hover {
+      transform: scale(1.04);
+      box-shadow: 0 0 28px rgba(255,255,255,0.2);
+    }
+
+    .links {
+      display: grid;
+      gap: 14px;
+      margin-top: 10px;
+    }
+
+    .links a {
+      display: block;
+      padding: 14px 18px;
+      text-decoration: none;
+      color: #fff;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 12px;
+      transition: transform 0.2s ease, background 0.2s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    .links a:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.14);
+    }
+
+    .section-title {
+      margin-top: 36px;
+      margin-bottom: 14px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      color: #eee;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid"></div>
+  <div class="fog"></div>
+
+  <div class="container">
+    <h1>DBD DJ</h1>
+    <p>Live mixes, streams, clips, and chaos.</p>
+
+    <a class="main-link" href="https://www.mixcloud.com/theDBDDJ/" target="_blank">
+      Listen on Mixcloud
+    </a>
+
+    <div class="links">
+      <a href="https://www.twitch.tv/thedbddj" target="_blank">Watch Live on Twitch</a>
+      <a href="https://www.youtube.com/@thedbddj" target="_blank">YouTube</a>
+      <a href="https://www.tiktok.com/@adbddj" target="_blank">Mulan 😇 TikTok</a>
+      <a href="https://www.tiktok.com/@thedbddj" target="_blank">Nalum 😈 TikTok</a>
+      <a href="https://www.dbddj.com/" target="_blank">Official Site</a>
+    </div>
+
+    <div class="section-title">Gear / Affiliate Links</div>
+    <div class="links">
+      <a href="#">Add Amazon Link 1</a>
+      <a href="#">Add Amazon Link 2</a>
+      <a href="#">Add Amazon Link 3</a>
+    </div>
+
+    <div class="footer">
+      © DBD DJ
+    </div>
+  </div>
+</body>
+</html>
